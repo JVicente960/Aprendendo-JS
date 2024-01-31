@@ -1,11 +1,23 @@
-let firstName = "Bro";
-let age = 21;
-let student = true;
+let count = 0;
+let day10 = "Congrats! Youe've reached a 10 day strek, you should celebrate by going out to eat"
 
-console.log("Hello", firstName);
-console.log("You are", age);
-console.log("Enrolled", student);
+document.getElementById("decreaseBtn").onclick = function() {
+    count -=1;
+    document.getElementById("countLabel").innerHTML = count;
+}
 
-document.getElementById("p1").innerHTML = "Hello "+ firstName;
-document.getElementById("p2").innerHTML = "You are "+ age +" years old";
-document.getElementById("p3").innerHTML = "Enrolled! "+ student;
+document.getElementById("resetBtn").onclick = function(){
+    count =0;
+    document.getElementById("countLabel").innerHTML = count;
+}
+
+document.getElementById("increaseBtn").onclick = function(){
+    count +=1;
+    document.getElementById("countLabel").innerHTML = count;
+    if(count === 10){
+        document.getElementById("celebrate").innerHTML = day10;
+    }
+    if(count === 11){
+        document.getElementById("celebrate").innerHTML = "1";
+    }
+}
