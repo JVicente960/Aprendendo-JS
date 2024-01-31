@@ -18,6 +18,6 @@ document.getElementById("increaseBtn").onclick = function(){
         document.getElementById("celebrate").innerHTML = day10;
     }
     if(count === 11){
-        document.getElementById("celebrate").innerHTML = "1";
+        document.getElementById("celebrate").innerHTML = "";
     }
 }
